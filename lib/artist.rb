@@ -2,7 +2,6 @@ class Artist
   
   attr_accessor :name, :songs
   
-  @@songs = []
   @@count = 0  
   
   def initialize(name)
@@ -26,15 +25,7 @@ class Artist
   end
   
   def self.song_count
-    song_count = {}
-    @@songs.each do |song|
-      if song_count[song]
-        song_count[song] += 1
-      else
-        song_count[song] = 1
-      end
-    end
-    song_count
+    @@count = 0
   end
   
 end
