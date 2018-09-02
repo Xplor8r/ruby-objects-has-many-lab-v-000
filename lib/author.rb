@@ -9,6 +9,7 @@ class Author
     @posts = []
     @@count += 1
   end
+  
   def posts
     @posts
   end
