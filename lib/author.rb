@@ -1,4 +1,4 @@
-class Author
+class Artist
   
   attr_accessor :name, :posts
   
@@ -15,16 +15,16 @@ class Author
 
   def add_post(post)
     @posts << post
-    song.artist = post
+    post.author = self
   end
   
-  def add_song_by_name(name)
-    song = Song.new(name)
-    @songs << song
-    song.artist = self
+  def add_post_by_title(title)
+    post = Post.new(title)
+    @posts << post
+    post.author = self
   end
   
-  def self.song_count
+  def self.post_count
     @@count
   end
   
